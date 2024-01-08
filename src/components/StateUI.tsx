@@ -1,5 +1,4 @@
 import { Student } from '@/lib/student';
-import React from 'react';
 import StudentInfo from './StudentInfo';
 import { Button } from './ui/button';
 
@@ -18,9 +17,6 @@ const StateUI = ({ student, reset, addCourse }: Props) => {
           Add Course
         </Button>
       </div>
-      {/* <Button onClick={() => setCount((c) => c + 1)}>
-        Jotai Count: {count}
-      </Button> */}
     </div>
   );
 };

@@ -1,7 +1,5 @@
 import { studentAtom } from '@/states/jotai';
-import { Button } from './ui/button';
 import { useAtom } from 'jotai';
-import StudentInfo from './StudentInfo';
 import StateUI from './StateUI';
 import { defaultStudent, registerCourse } from '@/lib/student';
 
