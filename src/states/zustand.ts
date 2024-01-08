@@ -9,6 +9,7 @@ type Action = {
   reset: () => void;
   addCourse: () => void;
 };
+
 export const useStore = create<State & Action>()((set) => ({
   student: defaultStudent,
   reset: () => set({ student: defaultStudent }),
