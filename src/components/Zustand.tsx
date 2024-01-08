@@ -1,7 +1,7 @@
 import { useStore } from '@/states/zustand';
 import StateUI from './StateUI';
 
-const Jotai = () => {
+const Zustand = () => {
   const student = useStore((state) => state.student);
   const reset = useStore((action) => action.reset);
   const addCourse = useStore((action) => action.addCourse);
@@ -15,4 +15,4 @@ const Jotai = () => {
   );
 };
 
-export default Jotai;
+export default Zustand;
