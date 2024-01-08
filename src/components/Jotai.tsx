@@ -1,7 +1,11 @@
-import React from 'react';
+import { Button } from './ui/button';
 
 const Jotai = () => {
-  return <div>Jotai</div>;
+  return (
+    <div>
+      <Button>Jotai</Button>
+    </div>
+  );
 };
 
 export default Jotai;
