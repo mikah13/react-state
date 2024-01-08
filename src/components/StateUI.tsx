@@ -1,6 +1,7 @@
 import { Student } from '@/lib/student';
 import StudentInfo from './StudentInfo';
 import { Button } from './ui/button';
+import { getSourceCodeURL } from '@/lib/utils';
 
 type Props = {
   label: string;
@@ -15,10 +16,17 @@ const StateUI = ({ label, student, reset, addCourse }: Props) => {
         {label}
       </div>
       <StudentInfo student={student} />
-      <div className='flex flex-row space-x-4 mt-4'>
+      <div className='justify-between flex flex-row space-x-4 mt-4'>
         <Button onClick={reset}>Reset</Button>
         <Button onClick={addCourse} variant='outline'>
           Add Course
+        </Button>
+        <Button
+          variant='ghost'
+          className='bg-blue-300'
+          onClick={() => (window.location.href = getSourceCodeURL(label))}
+        >
+          Code
         </Button>
       </div>
     </div>

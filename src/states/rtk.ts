@@ -2,10 +2,6 @@ import { defaultStudent, registerCourse } from '@/lib/student';
 import { configureStore } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 
-export const store = configureStore({
-  reducer: {},
-});
-
 export const studentSlice = createSlice({
   name: 'student',
   initialState: defaultStudent,
@@ -18,6 +14,13 @@ export const studentSlice = createSlice({
     },
   },
 });
+
+export const store = configureStore({
+  reducer: {
+    student: studentSlice.reducer,
+  },
+});
+
 export const { reset, addCourse } = studentSlice.actions;
 
 export type RootState = ReturnType<typeof store.getState>;
