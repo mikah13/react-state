@@ -1,5 +1,4 @@
 import { Student } from '@/lib/student';
-import React from 'react';
 import {
   Card,
   CardContent,
