@@ -1,16 +1,18 @@
 import { studentAtom } from '@/states/jotai';
 import { Button } from './ui/button';
 import { useAtom } from 'jotai';
+import StudentInfo from './StudentInfo';
+import StateUI from './StateUI';
+import { defaultStudent, registerCourse } from '@/lib/student';
 
 const Jotai = () => {
-  const [count, setCount] = useAtom(studentAtom);
+  const [student, updateStudent] = useAtom(studentAtom);
   return (
-      <div>
-          
-      <Button onClick={() => setCount((c) => c + 1)}>
-        Jotai Count: {count}
-      </Button>
-    </div>
+    <StateUI
+      student={student}
+      reset={() => updateStudent(defaultStudent)}
+      addCourse={() => updateStudent(registerCourse(student))}
+    />
   );
 };
 
