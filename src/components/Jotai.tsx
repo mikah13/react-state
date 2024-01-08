@@ -7,6 +7,7 @@ const Jotai = () => {
   const [student, updateStudent] = useAtom(studentAtom);
   return (
     <StateUI
+      label='Jotai'
       student={student}
       reset={() => updateStudent(defaultStudent)}
       addCourse={() => updateStudent(registerCourse(student))}

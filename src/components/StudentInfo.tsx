@@ -10,7 +10,7 @@ import {
 
 const StudentInfo = ({ student }: { student: Student }) => {
   return (
-    <Card>
+    <Card className='rounded-none'>
       <CardHeader>
         <CardTitle>{student.name}</CardTitle>
         <CardDescription>{student.age} years old</CardDescription>
